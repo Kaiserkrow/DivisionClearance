@@ -1,0 +1,14 @@
+.edit-btn {
+  width: 30px;
+}
+
+.custom-search-btn {
+  background-color: #90d30b !important;
+  filter: invert(1);
+}
+.search-neg-margin {
+  margin-top: -3rem !important;
+}
+.search-icon {
+  width: 30px;
+}

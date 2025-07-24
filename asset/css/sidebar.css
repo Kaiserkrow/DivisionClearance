@@ -1,0 +1,121 @@
+:root {
+  --primary: #6f2cf4;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 3px 0 5px -2px #888;
+}
+.hyperlinks {
+  padding-top: 7rem;
+}
+.sidebar a {
+  padding: 1rem 1rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 30px;
+}
+.hidden {
+  margin-top: -2rem;
+}
+#open-close-btn {
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+.sidebar-img {
+  width: 25px;
+}
+
+.logout {
+  outline: none;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+  background-color: var(--primary);
+  cursor: pointer;
+  border: none;
+  height: 35px;
+  width: 100px;
+  opacity: 1;
+}
+.logout-img {
+  width: 15px;
+  margin-top: -3px;
+}
+
+.title {
+  margin-bottom: 8rem;
+}
+.font-larger {
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+.parent {
+  gap: 3rem;
+}
+
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar-section,
+.dropdown-menu {
+  z-index: 9999 !important;
+}
+.text-white {
+  /* inverted yung color */
+  color: #0f0f0f !important;
+  font-weight: 600;
+}
+.links:hover {
+  background-color: var(--primary);
+  color: white !important;
+}
+.text-white:hover {
+  color: white;
+}
+.list-items:hover {
+  color: white;
+  background-color: #90d30b;
+  filter: invert(1);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.selected {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: white;
+  background-color: #90d30b;
+  filter: invert(1);
+}

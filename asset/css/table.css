@@ -1,0 +1,92 @@
+.table_component {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  margin: 20px auto;
+  width: 95%;
+  padding: 10px;
+}
+
+table {
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+thead {
+  background-color: #f8f9fa;
+}
+
+thead th {
+  text-align: center;
+  padding: 14px;
+  border-bottom: 2px solid #dee2e6;
+  color: #333;
+  font-weight: 600;
+}
+
+tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #dee2e6;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+tbody tr:hover {
+  background-color: #e9f5ff;
+}
+
+.edit-btn {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.2s ease;
+}
+
+.edit-btn:hover {
+  transform: scale(1.1);
+}
+
+.btn-danger,
+.btn-secondary {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 0.85rem;
+  }
+
+  .table_component {
+    padding: 5px;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    text-align: center;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+  }
+}
