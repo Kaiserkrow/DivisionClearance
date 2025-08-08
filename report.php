@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
               </a>
             </li>
             <li class="py-md-2">
-              <a href="index.php" class="selected list-items py-md-4 links hover-links ">
+              <a href="index.php" class="list-items py-md-4 links hover-links ">
                 <div class="d-flex">
                   <div><img class="sidebar-img dashboard tint" src="asset/img/form.png" alt=""/></div>
                   <div><div class="text-white ms-4 tint">Clearance Form</div></div>
@@ -87,7 +87,7 @@ if (isset($_POST['submit'])) {
               </a>
             </li>
             <li class="py-md-2">
-              <a href="report.php" class="list-items py-md-4 links hover-links ">
+              <a href="report.php" class="selected list-items py-md-4 links hover-links ">
                 <div class="d-flex">
                   <div><img class="sidebar-img dashboard tint" src="asset/img/report.png" alt=""/></div>
                   <div><div class="text-white ms-4 tint">Report</div></div>

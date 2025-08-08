@@ -12,3 +12,7 @@
 .search-icon {
   width: 30px;
 }
+
+.btn-delete {
+  padding: 0 !important;
+}
