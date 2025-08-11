@@ -39,7 +39,7 @@ $fullParams = $params;
 $fullTypes = $types . "ii";
 $fullParams[] = $limit;
 $fullParams[] = $offset;
-$stmt->bind_param($fullTypes, ...$fullParams);
+$stmt->bind_param($fullTypes, ...$fullParams); 
 
 $stmt->execute();
 $result = $stmt->get_result();
@@ -47,15 +47,16 @@ $result = $stmt->get_result();
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
     echo "<tr>
-      <td>{$row['fullName']}</td>
-      <td>{$row['position']}</td>
-      <td>{$row['district']}</td>
+      <td><input type='checkbox' class='entry-checkbox' value='{$row['id']}'></td>
+      <td>" . ucwords($row['fullName']) . "</td>
+      <td>" . ucfirst($row['position']) . "</td>
+      <td>" . ucwords(strtolower($row['district'])) . "</td>
       <td>{$row['school']}</td>
       <td>" . ucfirst($row['purposeOfClearance']) . "</td>
-      <td>" . (!empty($row['dateOfAction']) && $row['dateOfAction'] !== '0000-00-00' ? date("M d, Y", strtotime($row['dateOfAction'])) : 'N/A') . "</td>
-      <td>" . (!empty($row['startDate']) && $row['startDate'] !== '0000-00-00' ? date("M d, Y", strtotime($row['startDate'])) : 'N/A') . "</td>
-      <td>" . (!empty($row['endDate']) && $row['endDate'] !== '0000-00-00' ? date("M d, Y", strtotime($row['endDate'])) : 'N/A') . "</td>
-      <td>" . (!empty($row['additionalNote']) ? $row['additionalNote'] : 'N/A') . "</td>
+      <td class=\"".($row['dateOfAction'] === null ? 'not-applicable-indicator': '') ."\">" . (!empty($row['dateOfAction']) && $row['dateOfAction'] !== '0000-00-00' ? date("M d, Y", strtotime($row['dateOfAction'])) : 'N/A') . "</td>
+      <td class=\"".($row['startDate'] === null ? 'not-applicable-indicator': '') ."\">" . (!empty($row['startDate']) && $row['startDate'] !== '0000-00-00' ? date("M d, Y", strtotime($row['startDate'])) : 'N/A') . "</td>
+      <td class=\"".($row['endDate'] === null ? 'not-applicable-indicator': '') ."\" >" . (!empty($row['endDate']) && $row['endDate'] !== '0000-00-00' ? date("M d, Y", strtotime($row['endDate'])) : 'N/A') . "</td>
+      <td class=\"".($row['additionalNote'] === "N/A" ? 'not-applicable-indicator': '') ."\">" . (!empty($row['additionalNote']) ? $row['additionalNote'] : 'N/A') . "</td>
       <td>" . date("M d, Y", strtotime($row['schoolDistrictSigned'])) . "</td>
       <td>" . date("M d, Y", strtotime($row['divisionSigned'])) . "</td>
       <td>
@@ -78,11 +79,10 @@ if ($result->num_rows > 0) {
                 </div>
             </div>
         </div>
-        
-        
       </td>
     </tr>";
-  }
+}
+
 } else {
   echo "<tr><td colspan='12' class='text-center'>No matching entries found.</td></tr>";
 }

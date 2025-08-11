@@ -86,14 +86,6 @@ if (isset($_POST['submit'])) {
                 </div>
               </a>
             </li>
-            <li class="py-md-2">
-              <a href="report.php" class="list-items py-md-4 links hover-links ">
-                <div class="d-flex">
-                  <div><img class="sidebar-img dashboard tint" src="asset/img/report.png" alt=""/></div>
-                  <div><div class="text-white ms-4 tint">Report</div></div>
-                </div>
-              </a>
-            </li>
           </ul>
         </div>
       </div>
@@ -115,7 +107,7 @@ if (isset($_POST['submit'])) {
 
         <div class="col-12">
           <fieldset>
-            <legend>Elementary or High School?</legend>
+            
             <div class="form-check form-check-inline ms-3">
               <!-- from dropDownFilter.js -->
               <input onchange="districtFilter()" class="form-check-input" type="radio" name="elem-or-hs" value="elem">

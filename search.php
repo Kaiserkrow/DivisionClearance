@@ -70,30 +70,26 @@ if (isset($_GET['deleteid'])) {
                 </div>
               </a>
             </li>
-            <li class="py-md-2">
-              <a href="report.php" class="list-items py-md-4 links hover-links ">
-                <div class="d-flex">
-                  <div><img class="sidebar-img dashboard tint" src="asset/img/report.png" alt=""/></div>
-                  <div><div class="text-white ms-4 tint">Report</div></div>
-                </div>
-              </a>
-            </li>
+            
           </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <h1 class="text-center search-neg-margin mb-5">Search Clearance Forms</h1>
+<div id="whole-header" class="search-neg-margin">
+  <h1 class="text-center">Search Clearance Forms</h1>
 
-  <!-- Filters -->
-  <div class="container mb-4">
-    <div class="row justify-content-center">
-      <div class="col-md-5 mb-2">
-        <input type="text" id="searchInput" class="form-control" placeholder="Search by Full Name...">
+  <div class="filter-container">
+    <!-- Search -->
+     <div class="d-flex search justify-content-start">
+      <div class="w-100">
+        <input type="text" id="searchInput" class="w-100"placeholder=" Search by Full Name..." />
       </div>
-      <div class="col-md-3 mb-2">
-        <select id="purposeFilter" class="form-control">
+
+    <!-- Purpose Filter -->
+      <div class=" ms-3 filter-item d-flex justify-content-center align-items-center">
+        <select id="purposeFilter">
           <option value="">All Purposes</option>
           <option value="travel">Travel</option>
           <option value="retirement">Retirement</option>
@@ -102,14 +98,25 @@ if (isset($_GET['deleteid'])) {
           <option value="transferred Out">Transferred Out</option>
         </select>
       </div>
+
+     </div>
+    
+    <!-- Button -->
+    <div class="d-flex justify-content-center align-items-center" style="text-align: center;">
+      <div>
+        <button id="generate-pdf">Generate PDF</button>
+      </div>
+      
     </div>
   </div>
+</div>
 
   <!-- Table -->
   <div class="table_component" role="region" tabindex="0">
     <table>
       <thead>
         <tr>
+          <th></th>
           <th>Full Name</th>
           <th>Position</th>
           <th>District</th>
@@ -139,7 +146,9 @@ if (isset($_GET['deleteid'])) {
 
   <script src="asset/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="asset/js/sidebar.js"></script> 
+  <script src="asset/js/generateClearance.js"></script>
   <script src="asset/js/deleteHandler.js"></script>
+  <script src="asset/js/giveColorIndicator.js"></script>
   <script>
     const tableBody = document.getElementById('tableBody');
     const searchInput = document.getElementById('searchInput');
@@ -183,6 +192,8 @@ if (isset($_GET['deleteid'])) {
         });
       });
     }
+
+  
 
     searchInput.addEventListener('input', () => loadTable(1));
     purposeFilter.addEventListener('change', () => loadTable(1));

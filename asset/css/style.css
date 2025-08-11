@@ -54,11 +54,13 @@ textarea {
   margin: 0 auto;
 }
 .background-img {
+  margin: 0;
+  padding: 0;
   opacity: 0.15;
   position: absolute;
   z-index: -1;
-  width: 50%;
-  min-width: 700px;
+  width: 45vw;
+  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

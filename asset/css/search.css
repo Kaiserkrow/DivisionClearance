@@ -7,7 +7,7 @@
   filter: invert(1);
 }
 .search-neg-margin {
-  margin-top: -3rem !important;
+  margin-top: -4.5rem !important;
 }
 .search-icon {
   width: 30px;
@@ -15,4 +15,95 @@
 
 .btn-delete {
   padding: 0 !important;
+}
+input[type="checkbox"] {
+  width: 20px; /* Set the desired width */
+  height: 20px; /* Set the desired height */
+}
+#generate-pdf {
+  padding: 10px 30px !important;
+  font-weight: 600;
+}
+
+#whole-header {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#whole-header h1 {
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: rgb(27, 27, 27);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+/* Inputs */
+#whole-header select,
+#whole-header input {
+  border-radius: 0.75rem;
+  border: none;
+  background: #f8f9fa;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+#whole-header select:focus,
+#whole-header input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+  background: #fff;
+}
+
+/* Button */
+#generate-pdf {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  background: #6f2cf4;
+  border: none;
+  color: white;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#generate-pdf:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4);
+}
+
+/* Layout Spacing */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  #whole-header {
+    padding: 1.5rem;
+  }
+  #whole-header h1 {
+    font-size: 1.75rem;
+  }
+}
+.search {
+  flex-grow: 8;
+}
+#searchInput {
+  background-color: rgb(245, 245, 245) !important;
+  border: 1px solid rgba(197, 197, 197, 0.274) !important;
+}
+#purposeFilter {
+  border: 1px solid rgb(197, 197, 197) !important;
+}
+.not-applicable-indicator {
+  color: red !important;
+  font-weight: 800 !important;
 }
