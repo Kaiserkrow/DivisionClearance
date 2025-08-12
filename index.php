@@ -197,7 +197,7 @@ if (isset($_POST['submit'])) {
     </form>
   </div>
   
-  <footer class="formal-footer text-right ms-4">
+  <footer class="formal-footer text-end me-4">
     <p>
       © 2025 <span>DepEd SDO</span> | Developed by 
       <span>OJT Interns</span> (Batch 2025) — from 
