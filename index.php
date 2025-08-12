@@ -50,6 +50,8 @@ if (isset($_POST['submit'])) {
   <link rel="shortcut icon" href="asset/img/icon.png" type="image/x-icon"/>
 
 </head>
+
+
 <body>
   <div>
     <img src="asset/img//cam-norte.png" alt="" class="background-img">
@@ -61,7 +63,7 @@ if (isset($_POST['submit'])) {
       </div>
     </nav>
   </header>
-
+ <!-- © 2025 DepEd SDO | Developed by OJT Interns (Batch 2025) — from Mabini Colleges. -->
   <div>
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" id="close-btn1" class="text-center" onclick="openNav()">
@@ -194,6 +196,14 @@ if (isset($_POST['submit'])) {
       </div>
     </form>
   </div>
+  
+  <footer class="formal-footer text-right ms-4">
+    <p>
+      © 2025 <span>DepEd SDO</span> | Developed by 
+      <span>OJT Interns</span> (Batch 2025) — from 
+      <span>Mabini Colleges</span>.
+    </p>
+  </footer>
 
   <script src="asset/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="asset/js/sidebar.js"></script>
