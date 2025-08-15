@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Division Clearance</title>
+  <title>Division Clearance - Home</title>
   <link rel="stylesheet" href="asset/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="asset/css/sidebar.css">
   <link rel="stylesheet" href="asset/css/receipt.css">
@@ -95,7 +95,7 @@ if (isset($_POST['submit'])) {
   </div>
 
   <div class="form-wrapper mb-4">
-    <h2 class="title text-center mb-4">Division Clearance Form</h2>
+    <h2 class="title text-center mb-4">Division Clearance Form Database</h2>
     <form action="index.php" method="POST" id="whole-form">
       <div class="row g-3">
         <div class="col-md-6">
@@ -112,11 +112,11 @@ if (isset($_POST['submit'])) {
             
             <div class="form-check form-check-inline ms-3">
               <!-- from dropDownFilter.js -->
-              <input onchange="districtFilter()" class="form-check-input" type="radio" name="elem-or-hs" value="elem">
+              <input onchange="districtFilter(); schoolOrOffice();" class="form-check-input" type="radio" name="elem-or-hs" value="elem">
               <label class="form-check-label">Elementary</label>
             </div>
             <div class="form-check form-check-inline">
-              <input onchange="districtFilter()" class="form-check-input" type="radio" name="elem-or-hs" value="hs">
+              <input onchange="districtFilter(); schoolOrOffice();" class="form-check-input" type="radio" name="elem-or-hs" value="hs">
               <label class="form-check-label">High School</label>
             </div>
           </fieldset>
@@ -124,10 +124,10 @@ if (isset($_POST['submit'])) {
 
         <div class="col-md-6">
           <label for="district" class="form-label">District</label>
-          <select id="district" name="district" class="form-select" onchange="schoolFilter()" required></select>
+          <select id="district" name="district" class="form-select" onchange="schoolFilter();  schoolOrOffice();" required></select>
         </div>
         <div class="col-md-6">
-          <label for="school" class="form-label">School</label>
+          <label for="school" id="schoolOrOffice" class="form-label">School</label>
           <select id="school" name="school" class="form-select" required></select>
         </div>
 
@@ -199,9 +199,7 @@ if (isset($_POST['submit'])) {
   
   <footer class="formal-footer text-end me-4">
     <p>
-      © 2025 <span>DepEd SDO</span> | Developed by 
-      <span>OJT Interns</span> (Batch 2025) — from 
-      <span>Mabini Colleges</span>.
+      © 2025 <span class="deped-sdo">DepEd SDO Camarines Norte</span> | <span class="small-text">AJAA / ACG</span>
     </p>
   </footer>
 
@@ -210,5 +208,6 @@ if (isset($_POST['submit'])) {
   <script src="asset/js/dropDownFilter.js"></script>
   <script src="asset/js/purposeChoices.js"></script>
   <script defer src="asset/js/receipt.js"></script>
+  <script src="asset/js/schoolOrOffice.js"></script>
 </body>
 </html>

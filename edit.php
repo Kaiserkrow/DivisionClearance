@@ -119,13 +119,13 @@ if (isset($_GET['id'])) {
 
         <div class="col-12">
           <fieldset>
-            <legend>Elementary or High School?</legend>
+            
             <div class="form-check form-check-inline ms-3">
-              <input onchange="districtFilter()" class="form-check-input" type="radio" name="elem-or-hs" value="elem">
+              <input onchange="districtFilter(); schoolOrOffice();" class="form-check-input" type="radio" name="elem-or-hs" value="elem">
               <label class="form-check-label">Elementary</label>
             </div>
             <div class="form-check form-check-inline">
-              <input onchange="districtFilter()" class="form-check-input" type="radio" name="elem-or-hs" value="hs">
+              <input onchange="districtFilter();schoolOrOffice();" class="form-check-input" type="radio" name="elem-or-hs" value="hs">
               <label class="form-check-label">High School</label>
             </div>
           </fieldset>
@@ -133,10 +133,10 @@ if (isset($_GET['id'])) {
 
         <div class="col-md-6">
           <label for="district" class="form-label">District</label>
-          <select id="district" name="district" class="form-select" onchange="schoolFilter()" required></select>
+          <select id="district" name="district" class="form-select" onchange="schoolFilter(); schoolOrOffice();" required></select>
         </div>
         <div class="col-md-6">
-          <label for="school" class="form-label">School</label>
+          <label for="school" class="form-label" id="schoolOrOffice" >School</label>
           <select id="school" name="school" class="form-select" required></select>
         </div>
 
@@ -212,6 +212,6 @@ if (isset($_GET['id'])) {
 <script src="asset/js/purposeChoices.js" defer></script>
 <script src="asset/js/receipt.js" defer></script>
 <script src="asset/js/edit.js" defer></script>
-
+<script src="asset/js/schoolOrOffice.js"></script>
 </body>
 </html>

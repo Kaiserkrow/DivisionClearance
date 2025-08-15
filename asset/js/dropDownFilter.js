@@ -3,6 +3,25 @@ const districtElem = [
     district: "Nothing Selected",
   },
   {
+    district: "Division Office",
+    schools: [
+      "Nothing Selected",
+      "SDS Office",
+      "ASDS Office",
+      "CID Office",
+      "SGOD Office",
+      "Admin. Office",
+      "Records Section",
+      "HRM/Personnel Section",
+      "Cashier Section",
+      "Legal Unit",
+      "ICT Unit",
+      "Budget and Accounting Section",
+      "Supply Office",
+      "School Health Section",
+    ],
+  },
+  {
     district: "CAPALONGA",
     schools: [
       "Nothing Selected",
@@ -349,6 +368,25 @@ const districtHS = [
     district: "Nothing Selected",
   },
   {
+    district: "Division Office",
+    schools: [
+      "Nothing Selected",
+      "SDS Office",
+      "ASDS Office",
+      "CID Office",
+      "SGOD Office",
+      "Admin. Office",
+      "Records Section",
+      "HRM/Personnel Section",
+      "Cashier Section",
+      "Legal Unit",
+      "ICT Unit",
+      "Budget and Accounting Section",
+      "Supply Office",
+      "School Health Section",
+    ],
+  },
+  {
     district: "CAPALONGA",
     schools: [
       "Nothing Selected",
@@ -500,6 +538,7 @@ const districtHS = [
 ];
 
 function districtFilter() {
+  const label = document.getElementById("schoolOrOffice");
   const schoolDropdown = document.getElementById("school");
   schoolDropdown.innerHTML = "";
   const districtDropdown = document.getElementById("district");

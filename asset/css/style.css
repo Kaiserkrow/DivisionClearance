@@ -74,6 +74,14 @@ textarea {
   background-color: #f0f2f5;
 }
 
-footer span {
+.deped-sdo {
   color: #6f2cf4;
+}
+.small-text {
+  font-size: 10px !important;
+}
+
+.chonky-text {
+  font-weight: 700;
+  font-size: 1.5rem !important;
 }

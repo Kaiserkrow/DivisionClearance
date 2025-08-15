@@ -19,6 +19,7 @@
 input[type="checkbox"] {
   width: 20px; /* Set the desired width */
   height: 20px; /* Set the desired height */
+  cursor: pointer;
 }
 #generate-pdf {
   padding: 10px 30px !important;
@@ -115,4 +116,8 @@ input[type="checkbox"] {
 #purposeFilter:hover {
   cursor: pointer;
   scale: 1.04;
+}
+.violet {
+  color: #6f2cf4;
+  font-weight: 700;
 }
