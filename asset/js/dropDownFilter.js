@@ -513,15 +513,6 @@ const districtHS = [
     ],
   },
   {
-    district: "TALISAY",
-    schools: [
-      "Nothing Selected",
-      "Gonzales Azcutia HS",
-      "San Francisco NHS",
-      "Lazaro Cabezudo HS",
-    ],
-  },
-  {
     district: "VINZONS",
     schools: [
       "Nothing Selected",
@@ -533,6 +524,15 @@ const districtHS = [
       "Vinzons Pilot HS",
       "Matango National HS",
       "Mangcawayan Island IS",
+    ],
+  },
+  {
+    district: "TALISAY",
+    schools: [
+      "Nothing Selected",
+      "Gonzales Azcutia HS",
+      "San Francisco NHS",
+      "Lazaro Cabezudo HS",
     ],
   },
 ];
